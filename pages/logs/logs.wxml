@@ -1,8 +1,12 @@
 <!--logs.wxml-->
 
-<view class="container log-list">
-<map>
+<map longitude="112.94349" latitude="28.15009" markers="{{markers}}"  bindmarkertap="markertap" show-location style="width: 100%; height: 300px;">
 </map>
+
+<button type="primary" size="{{primarySize}}" bindtap="found"> 发现失物 </button>
+<button type="default" size="{{defaultSize}}" bindtap="lost"> 寻求失物  </button>
+
+<view class="container log-list">
   <block wx:for="{{logs}}" wx:for-item="log">
     <text class="log-item">{{index + 1}}. {{log}}</text>
   </block>

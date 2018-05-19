@@ -3,9 +3,18 @@ const util = require('../../utils/util.js')
 
 Page({
   data: {
-    longitude: 28.1478761093,
-    latitude:112.9438734055,
+    markers: [{
+      iconPath: "../resources/find.png",
+      id: 0,
+      latitude: 28.15009,
+      longitude: 112.94349,
+      width: 50,
+      height: 50
+    }],
     logs: []
+  },
+  marktap: function() {
+    //TODO:
   },
   onLoad: function () {
     this.setData({
