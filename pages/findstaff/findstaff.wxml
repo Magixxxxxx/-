@@ -1,0 +1,83 @@
+<!--pages/findstaff.wxml-->
+<!--radio-group-->
+
+
+<radio-group class="radop-group" bindchange="radioChange">
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                  <label class="radio">
+                    <radio value="LOST" checked="true"/>我丢了东西
+                  </label>
+                </view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">    
+                  <label class="radio">
+                    <radio value="FOUND" />我捡到了东西
+                  </label>
+                </view>
+            </view>
+        </view>
+  </radio-group>
+
+
+<!--/radio-group-->
+<!--物品名称-->
+<view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">物品名称</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入物品名" bindinput="staffNameInput"/>
+                </view>
+            </view>
+</view>
+<!--/物品名称-->
+<!--捡拾地点-->
+<view class="page__bd">
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">地点</view>
+                <view class="weui-cell__ft"> <button class="weui-btn" type="primary"  bindtap='locate'>定位</button></view>
+            </view>
+        </view>       
+</view>
+<!-- <view class="section">
+  
+    <view class="location">
+      <text class="input" style="width:30%;">经度:</text>  
+      <input class="input" type="text"   
+        value="{{longitude}}" name="longitude"></input>  
+      <text class="input" style="width:30%;">纬度:</text>  
+      <input class="input" type="text"   
+        value="{{latitude}}" name="latitude"></input>    
+    </view>
+</view> -->
+<!--/捡拾地点-->
+<!--简单描述-->
+<view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">简要描述</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" disabled='true'/>
+                </view>
+            </view>
+</view>
+<view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea  bindinput='staffIntrInput' class="weui-textarea" placeholder="请输入简要描述" style="height: 12em" />
+                    
+                </view>
+            </view>
+        </view>
+<!--/简单描述-->
+<!--确认发布-->
+<view class="class="page__bd page__bd_spacing>
+  <button class="weui-btn" type="primary" bindtap='uploadInfo'>确认发布</button>
+</view>
+<!--/确认发布-->

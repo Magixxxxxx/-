@@ -1,0 +1,5 @@
+/* pages/findstaff.wxss */
+.location{
+    display: flex;  
+    flex-direction: row; 
+}
