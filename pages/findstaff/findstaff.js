@@ -117,7 +117,7 @@ Page({
     console.log(this.data.eventType);
     console.log(app.globalData.userInfo.nickName);
     wx.request({
-      url: 'http://rouzip.com:4000/uploadInfo', //你的后台地址
+      url: 'http://rouzip.me:4000/uploadInfo', //你的后台地址
       //url: 'http://www.baidu.com',
       data: JSON.stringify({
         staffName: this.data.staffName,     //物品名
